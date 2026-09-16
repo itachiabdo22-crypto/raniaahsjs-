@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إلى رانيا ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+    font-family:"Cairo",sans-serif;
+    background:#12060d;
+    color:white;
+    overflow-x:hidden;
+}
+
+body{
+    min-height:100vh;
+}
+
+.screen{
+    display:none;
+    min-height:100vh;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    padding:25px 15px;
+    position:relative;
+    overflow:hidden;
+}
+
+.screen.active{
+    display:flex;
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:scale(1.04);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.background{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,83,145,.25),transparent 30%),
+    radial-gradient(circle at 80% 80%,rgba(192,68,255,.18),transparent 30%),
+    linear-gradient(145deg,#13070e,#381021,#15070e);
+    z-index:-5;
+}
+
+.stars{
+    position:absolute;
+    inset:0;
+    background-image:
+    radial-gradient(#fff 1px,transparent 1px);
+    background-size:42px 42px;
+    opacity:.13;
+    animation:starsMove 15s linear infinite;
+    z-index:-4;
+}
+
+@keyframes starsMove{
+    to{
+        transform:translateY(42px);
+    }
+}
+
+.glow{
+    position:absolute;
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    filter:blur(45px);
+    opacity:.25;
+    z-index:-3;
+}
+
+.glow.one{
+    background:#ff397e;
+    top:-70px;
+    right:-70px;
+}
+
+.glow.two{
+    background:#b44dff;
+    bottom:-70px;
+    left:-70px;
+}
+
+.card{
+    width:min(94vw,720px);
+    max-height:92vh;
+    overflow:auto;
+    padding:30px 23px;
+    text-align:center;
+    border-radius:32px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.16);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:0 25px 80px rgba(0,0,0,.45);
+    position:relative;
+}
+
+.card::-webkit-scrollbar{
+    width:4px;
+}
+
+.card::-webkit-scrollbar-thumb{
+    background:#ff6397;
+    border-radius:20px;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 15px;
+    border-radius:50px;
+    background:rgba(255,255,255,.09);
+    color:#ffd5e3;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+h1,h2{
+    font-family:"Amiri",serif;
+}
+
+h1{
+    font-size:clamp(48px,14vw,90px);
+    margin:5px 0;
+}
+
+h2{
+    font-size:clamp(32px,9vw,54px);
+    margin:8px 0 15px;
+}
+
+p{
+    color:#ffeaf2;
+    line-height:2;
+    font-size:16px;
+}
+
+.small{
+    font-size:12px;
+    color:#d9b5c5;
+}
+
+/* HELLO KITTY STYLE */
+
+.kitty{
+    width:135px;
+    height:112px;
+    background:white;
+    border-radius:48%;
+    margin:5px auto 20px;
+    position:relative;
+    box-shadow:0 20px 50px rgba(255,77,139,.25);
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.kitty:before,
+.kitty:after{
+    content:"";
+    position:absolute;
+    top:-25px;
+    width:48px;
+    height:48px;
+    background:white;
+    z-index:-1;
+}
+
+.kitty:before{
+    right:8px;
+    transform:rotate(35deg);
+    border-radius:10px 30px 10px 20px;
+}
+
+.kitty:after{
+    left:8px;
+    transform:rotate(-35deg);
+    border-radius:30px 10px 20px 10px;
+}
+
+.eye{
+    width:8px;
+    height:15px;
+    border-radius:50%;
+    background:#222;
+    position:absolute;
+    top:50px;
+}
+
+.eye.right{
+    right:37px;
+}
+
+.eye.left{
+    left:37px;
+}
+
+.nose{
+    width:9px;
+    height:9px;
+    background:#ffd84d;
+    border-radius:50%;
+    position:absolute;
+    top:72px;
+    left:calc(50% - 4px);
+}
+
+.bow{
+    position:absolute;
+    right:5px;
+    top:7px;
+    width:40px;
+    height:30px;
+}
+
+.bow:before,
+.bow:after{
+    content:"";
+    position:absolute;
+    width:23px;
+    height:28px;
+    background:#ff4b82;
+    border:2px solid #c72b5e;
+}
+
+.bow:before{
+    right:14px;
+    border-radius:17px 5px 17px 5px;
+    transform:rotate(15deg);
+}
+
+.bow:after{
+    right:-1px;
+    border-radius:5px 17px 5px 17px;
+    transform:rotate(-15deg);
+}
+
+.bow span{
+    position:absolute;
+    right:11px;
+    top:10px;
+    width:13px;
+    height:13px;
+    background:#ff86aa;
+    border-radius:50%;
+    z-index:2;
+}
+
+/* PASSWORD */
+
+.password-box{
+    display:flex;
+    gap:10px;
+    max-width:480px;
+    margin:22px auto 8px;
+}
+
+.password-box input{
+    flex:1;
+    min-width:0;
+    padding:15px;
+    border-radius:17px;
+    border:1px solid rgba(255,255,255,.2);
+    outline:none;
+    background:rgba(0,0,0,.2);
+    color:white;
+    text-align:center;
+}
+
+.password-box input::placeholder{
+    color:#cbaeba;
+}
+
+.error{
+    height:25px;
+    color:#ff91b3;
+    font-size:13px;
+}
+
+.btn{
+    border:0;
+    border-radius:17px;
+    padding:14px 23px;
+    color:white;
+    background:linear-gradient(135deg,#ff4e89,#ba2f6c);
+    box-shadow:0 10px 30px rgba(255,52,124,.25);
+    font-weight:700;
+    transition:.25s;
+    margin:5px;
+}
+
+.btn:active{
+    transform:scale(.94);
+}
+
+.btn.secondary{
+    background:rgba(255,255,255,.1);
+    box-shadow:none;
+}
+
+/* ENVELOPE */
+
+.envelope{
+    width:min(90vw,500px);
+    height:320px;
+    margin:20px auto 25px;
+    position:relative;
+    background:#f0ccd9;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 25px 70px rgba(0,0,0,.4);
+    color:#63263e;
+}
+
+.paper{
+    position:absolute;
+    left:8%;
+    right:8%;
+    top:18px;
+    height:245px;
+    background:#fffdf9;
+    border-radius:5px;
+    padding:28px 18px;
+    z-index:1;
+    box-shadow:0 3px 15px rgba(0,0,0,.12);
+}
+
+.paper p{
+    color:#63263e;
+    font-family:"Amiri",serif;
+    font-size:22px;
+    line-height:1.8;
+}
+
+.flap{
+    position:absolute;
+    inset:0 0 auto;
+    height:165px;
+    background:#e7bdce;
+    clip-path:polygon(0 0,100% 0,50% 92%);
+    z-index:4;
+    transform-origin:top;
+}
+
+.front{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:190px;
+    background:#e4bacb;
+    clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);
+    z-index:5;
+}
+
+.envelope-name{
+    position:absolute;
+    bottom:30px;
+    width:100%;
+    z-index:6;
+    font-family:"Amiri",serif;
+    font-size:40px;
+}
+
+.envelope.open .flap{
+    animation:openFlap 1s ease forwards;
+}
+
+.envelope.open .paper{
+    animation:paperUp 1s ease forwards;
+}
+
+@keyframes openFlap{
+    to{
+        transform:rotateX(180deg);
+        opacity:.3;
+    }
+}
+
+@keyframes paperUp{
+    to{
+        transform:translateY(-90px);
+    }
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin:20px 0;
+}
+
+.love{
+    padding:18px 10px;
+    border-radius:20px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.love .emoji{
+    font-size:30px;
+}
+
+.love strong{
+    display:block;
+    color:#ffd5e3;
+    margin:5px;
+}
+
+.love span{
+    font-size:12px;
+    color:#d9bcc8;
+}
+
+/* TIMELINE */
+
+.timeline{
+    text-align:right;
+    border-right:2px solid rgba(255,94,147,.5);
+    padding-right:20px;
+    margin:25px 0;
+}
+
+.timeline-item{
+    position:relative;
+    margin:24px 0;
+}
+
+.timeline-item:before{
+    content:"❤";
+    position:absolute;
+    right:-31px;
+    color:#ff679b;
+}
+
+.timeline-item strong{
+    color:#ffd2e1;
+}
+
+.timeline-item p{
+    font-size:13px;
+}
+
+/* GIFT */
+
+.gift{
+    width:145px;
+    height:120px;
+    margin:30px auto;
+    border-radius:12px;
+    background:linear-gradient(135deg,#ff6b9d,#c93270);
+    position:relative;
+    box-shadow:0 20px 60px rgba(255,64,132,.3);
+    animation:giftFloat 2s ease-in-out infinite;
+}
+
+@keyframes giftFloat{
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+.gift:before{
+    content:"";
+    position:absolute;
+    left:58px;
+    top:0;
+    height:100%;
+    width:28px;
+    background:#ffd469;
+}
+
+.gift:after{
+    content:"🎀";
+    position:absolute;
+    top:-40px;
+    left:38px;
+    font-size:60px;
+}
+
+.gift.open{
+    animation:giftOpen .8s forwards;
+}
+
+@keyframes giftOpen{
+    50%{
+        transform:scale(1.2) rotate(5deg);
+    }
+    100%{
+        transform:scale(.1);
+        opacity:0;
+    }
+}
+
+/* ROSES */
+
+.rose-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin:25px 0;
+}
+
+.rose-button{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.08);
+    font-size:30px;
+    transition:.3s;
+}
+
+.rose-button:active{
+    transform:scale(1.2);
+}
+
+.revealed{
+    min-height:75px;
+    font-family:"Amiri",serif;
+    font-size:22px;
+    color:#ffe1ec;
+}
+
+/* DREAM */
+
+.quote{
+    font-family:"Amiri",serif;
+    font-size:23px;
+    line-height:2;
+    color:#ffe7f0;
+}
+
+/* PHOTOS */
+
+.photos{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin:20px 0;
+}
+
+.photo{
+    aspect-ratio:1/1;
+    border:1px dashed rgba(255,255,255,.35);
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.07);
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* FINAL */
+
+.final-heart{
+    font-size:110px;
+    animation:heartbeat 1.2s infinite;
+    filter:drop-shadow(0 0 30px #ff4f91);
+}
+
+@keyframes heartbeat{
+    0%,100%{
+        transform:scale(1);
+    }
+    30%{
+        transform:scale(1.16);
+    }
+    60%{
+        transform:scale(1);
+    }
+}
+
+/* PARTICLES */
+
+#particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:100;
+}
+
+.particle{
+    position:absolute;
+    font-size:23px;
+    animation:particleFly 1.8s ease-out forwards;
+}
+
+@keyframes particleFly{
+    from{
+        transform:translate(0,0) scale(.5) rotate(0);
+        opacity:1;
+    }
+    to{
+        transform:translate(var(--x),var(--y)) scale(1.5) rotate(var(--rotate));
+        opacity:0;
+    }
+}
+
+/* RAIN */
+
+#rain{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:90;
+}
+
+.falling{
+    position:absolute;
+    top:-50px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:.15;
+    }
+}
+
+/* PROGRESS */
+
+.progress{
+    position:fixed;
+    top:10px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(75vw,420px);
+    height:4px;
+    background:rgba(255,255,255,.1);
+    border-radius:20px;
+    z-index:200;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    width:0;
+    background:#ff6599;
+    border-radius:20px;
+    transition:.6s;
+}
+
+.music{
+    position:fixed;
+    left:15px;
+    bottom:15px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.2);
+    background:rgba(25,8,17,.7);
+    color:white;
+    z-index:200;
+    font-size:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:520px){
+
+    .card{
+        padding:25px 16px;
+        border-radius:25px;
+    }
+
+    .password-box{
+        flex-direction:column;
+    }
+
+    .password-box .btn{
+        width:100%;
+        margin:0;
+    }
+
+    .grid{
+        gap:8px;
+    }
+
+    .love{
+        padding:14px 7px;
+    }
+
+    .quote{
+        font-size:20px;
+    }
+
+    .envelope{
+        height:300px;
+    }
+
+    .photos{
+        gap:8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="progress">
+    <span id="progress"></span>
+</div>
+
+<button class="music" onclick="musicMessage()">🎵</button>
+
+<div id="particles"></div>
+<div id="rain"></div>
+
+<!-- SCREEN 1 -->
+
+<section class="screen active" id="screen1">
+
+<div class="background"></div>
+<div class="stars"></div>
+<div class="glow one"></div>
+<div class="glow two"></div>
+
+<div class="card">
+
+<div class="kitty">
+    <div class="eye right"></div>
+    <div class="eye left"></div>
+    <div class="nose"></div>
+    <div class="bow"><span></span></div>
+</div>
+
+<span class="badge">💌 رسالة صغيرة لشخص استثنائي</span>
+
+<h1>إلى رانيا ❤️</h1>
+
+<p>
+هناك شيء صغير أعددته لكِ...
+لكن لن تستطيعِ الدخول إليه
+إلا بكلمة يعرفها قلبي وأنتِ فقط 🔐🌹
+</p>
+
+<div class="password-box">
+
+<input
+id="password"
+type="password"
+placeholder="اكتبي كلمة السر..."
+>
+
+<button class="btn" onclick="unlock()">
+افتحي المفاجأة 🔐
+</button>
+
+</div>
+
+<div class="error" id="error"></div>
+
+<p class="small">
+تلميح: كلمة صغيرة تحمل معنى كبيرًا ❤️
+</p>
+
+</div>
+</section>
+
+
+<!-- SCREEN 2 -->
+
+<section class="screen" id="screen2">
+
+<div class="background"></div>
+<div class="stars"></div>
+
+<div class="card">
+
+<span class="badge">💌 لديكِ رسالة</span>
+
+<h2>رسالة لكِ</h2>
+
+<div class="envelope" id="envelope">
+
+<div class="paper">
+<p>
+بعض الأشخاص يدخلون حياتنا صدفة...
+ثم يصبح وجودهم أجمل شيء فيها. ❤️
+</p>
+</div>
+
+<div class="flap"></div>
+<div class="front"></div>
+
+<div class="envelope-name">
+رانيا 🌹
+</div>
+
+</div>
+
+<button class="btn" onclick="openEnvelope()">
+افتحي الظرف 💌
+</button>
+
+<button class="btn secondary" onclick="next()">
+أكملي ❤️
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 3 -->
+
+<section class="screen" id="screen3">
+
+<div class="background"></div>
+<div class="stars"></div>
+
+<div class="card">
+
+<span class="badge">❤️ رسالتي لكِ</span>
+
+<h2>أنتِ أكثر من مجرد حب</h2>
+
+<p class="quote">
+
+رانيا...
+لا أعرف كيف استطعتِ أن تأخذي كل هذا المكان في قلبي دون أن أشعر،
+لكنني أعرف أن حياتي أصبحت أجمل منذ أن عرفتكِ. ❤️
+
+أنتِ لستِ مجرد حبيبتي؛
+أنتِ راحتي، وصديقتي، وطفلتي المدللة التي أخاف عليها،
+والإنسانة التي أتمنى أن أراها سعيدة دائمًا. 🥹🤍
+
+أحب ضحكتكِ، تفاصيلكِ، عفويتكِ،
+وحتى الأشياء الصغيرة التي لا تنتبهين إليها أنتِ.
+
+وجودكِ جعل للأيام معنى مختلفًا،
+وجعلني أتخيل مستقبلًا لا أريده جميلًا
+إلا إذا كنتِ جزءًا منه. 🌹
+
+ولو كانت الكلمات تستطيع أن تحمل كل ما في قلبي،
+لاحتجتُ إلى عمر كامل لأكتب لكِ كم أنتِ غالية عليّ. ❤️‍🩹
+
+</p>
+
+<button class="btn" onclick="next()">
+هناك المزيد 🌹
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 4 -->
+
+<section class="screen" id="screen4">
+
+<div class="background"></div>
+<div class="stars"></div>
+
+<div class="card">
+
+<span class="badge">🌷 أكثر ما أحبه فيكِ</span>
+
+<h2>ليس شيئًا واحدًا... بل أنتِ</h2>
+
+<div class="grid">
+
+<div class="love">
+<div class="emoji">🥹</div>
+<strong>حنانكِ</strong>
+<span>ذلك الشيء الذي يجعل قربكِ مختلفًا.</span>
+</div>
+
+<div class="love">
+<div class="emoji">🌸</div>
+<strong>ابتسامتكِ</strong>
+<span>تفصيل صغير يستطيع تغيير يوم كامل.</span>
+</div>
+
+<div class="love">
+<div class="emoji">🤍</div>
+<strong>قلبكِ</strong>
+<span>أحد أجمل الأشياء التي تجعلني أتمسك بكِ.</span>
+</div>
+
+<div class="love">
+<div class="emoji">🎀</div>
+<strong>عفويتكِ</strong>
+<span>أحب أنكِ أنتِ دون تصنع.</span>
+</div>
+
+<div class="love">
+<div class="emoji">🫂</div>
+<strong>وجودكِ</strong>
+<span>يشبه مكانًا أشعر فيه بالراحة.</span>
+</div>
+
+<div class="love">
+<div class="emoji">🔐</div>
+<strong>تفاصيلكِ</strong>
+<span>حتى أصغر تفاصيلكِ أصبحت تعني لي الكثير.</span>
+</div>
+
+</div>
+
+<button class="btn" onclick="next()">
+التالي 🌹
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 5 -->
+
+<section class="screen" id="screen5">
+
+<div class="background"></div>
+<div class="stars"></div>
+
+<div class="card">
+
+<span class="badge">📖 قصتنا</span>
+
+<h2>من صدفة إلى شيء لا أريد خسارته</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<strong>البداية 🌱</strong>
+<p>
+في البداية كنتِ مجرد شخص عرفته،
+ولم أكن أعرف أن وراء هذا التعارف قصة ستأخذ مكانًا كبيرًا في قلبي.
+</p>
+</div>
+
+<div class="timeline-item">
+<strong>ثم أصبحتِ قريبة 🤍</strong>
+<p>
+بدأت تفاصيلكِ تدخل أيامي شيئًا فشيئًا،
+حتى أصبح الحديث معكِ شيئًا أنتظره.
+</p>
+</div>
+
+<div class="timeline-item">
+<strong>ثم أصبحتِ مهمة ❤️</strong>
+<p>
+لم أعد أسأل نفسي لماذا أحبكِ،
+بل أصبحت أسأل نفسي كيف أحافظ على هذا الشيء الجميل.
+</p>
+</div>
+
+<div class="timeline-item">
+<strong>والآن 🌹</strong>
+<p>
+أريد أن تستمر القصة...
+لا كذكرى جميلة،
+بل كحكاية نكملها معًا.
+</p>
+</div>
+
+</div>
+
+<button class="btn" onclick="next()">
+أكملي القصة ✨
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 6 -->
+
+<section class="screen" id="screen6">
+
+<div class="background"></div>
+<div class="stars"></div>
+
+<div class="card">
+
+<span class="badge">🎁 مفاجأة</span>
+
+<h2>هل تريدين فتح الهدية؟</h2>
+
+<div class="gift" id="gift"></div>
+
+<p>
+لكن انتبهي...
+الهدية ليست شيئًا يمكن وضعه في صندوق،
+إنها شيء من قلبي ❤️
+</p>
+
+<button class="btn" onclick="openGift()">
+افتحيها 🎁💥
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 7 -->
+
+<section class="screen" id="screen7">
+
+<div class="background"></div>
+<div class="stars"></div>
+
+<div class="card">
+
+<span class="badge">🌹 سبع وردات</span>
+
+<h2>اضغطي على كل وردة</h2>
+
+<p>
+كل وردة تخبئ سببًا صغيرًا يجعل وجودكِ غاليًا عندي.
+</p>
+
+<div class="rose-buttons">
+
+<button class="rose-button" onclick="reveal(this,'لأنكِ تجعلين أيامي أجمل ❤️')">🌹</button>
+
+<button class="rose-button" onclick="reveal(this,'لأنني أستطيع أن أكون نفسي معكِ 🤍')">🌷</button>
+
+<button class="rose-button" onclick="reveal(this,'لأن ابتسامتكِ تعني لي الكثير 🥹')">🌸</button>
+
+<button class="rose-button" onclick="reveal(this,'لأنكِ أصبحتِ جزءًا من دعائي وأحلامي 🤲🏻')">🌺</button>
+
+<button class="rose-button" onclick="reveal(this,'لأن قلبكِ يستحق كل الحنان 🫂')">🌹</button>
+
+<button class="rose-button" onclick="reveal(this,'لأن تفاصيلكِ لا تشبه أحدًا 🎀')">🌼</button>
+
+<button class="rose-button" onclick="reveal(this,'لأنني أريد أن أراكِ سعيدة دائمًا ❤️‍🩹')">💐</button>
+
+</div>
+
+<p class="revealed" id="revealed">
+اضغطي على وردة 🌹
+</p>
+
+<button class="btn" onclick="next()">
+مفاجأة أخرى 🎀
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 8 -->
+
+<section class="screen" id="screen8">
+
+<div class="background"></div>
+<div class="stars"></div>
+
+<div class="card">
+
+<span class="badge">🌙 أحلامنا</span>
+
+<h2>لو كان لنا أن نحلم...</h2>
+
+<p class="quote">
+
+أحلم بيوم لا تكون فيه المسافة بيننا
+إلا غرفة واحدة... 🏡❤️
+
+أحلم بصباح أراكِ فيه أول وجه،
+وبليل أنهيه وأنا مطمئن أنكِ بجانبي. 🤍
+
+أحلم ببيت صغير يجمعنا،
+مليء بالضحك والدفء والذكريات. 🌷
+
+أحلم أن نكبر معًا،
+ننجح معًا،
+نسافر معًا،
+ونضحك يومًا على كل الأشياء التي مررنا بها. ✈️❤️
+
+وأحلم أن ننظر يومًا إلى الخلف
+فنقول:
+
+"لقد كان كل هذا يستحق." 🥹💍
+
+</p>
+
+<button class="btn" onclick="next()">
+آخر مفاجأة 🌹
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 9 -->
+
+<section class="screen" id="screen9">
+
+<div class="background"></div>
+<div class="stars"></div>
+
+<div class="card">
+
+<span class="badge">📸 ذكرياتنا</span>
+
+<h2>ضعي صوركِ هنا ❤️</h2>
+
+<p>
+هذه المساحات تنتظر أجمل صور رانيا 🌸
+</p>
+
+<div class="photos">
+
+<label class="photo">
+<input type="file" accept="image/*" hidden onchange="loadPhoto(this)">
+<span>📷 صورة 1</span>
+</label>
+
+<label class="photo">
+<input type="file" accept="image/*" hidden onchange="loadPhoto(this)">
+<span>📷 صورة 2</span>
+</label>
+
+<label class="photo">
+<input type="file" accept="image/*" hidden onchange="loadPhoto(this)">
+<span>📷 صورة 3</span>
+</label>
+
+<label class="photo">
+<input type="file" accept="image/*" hidden onchange="loadPhoto(this)">
+<span>📷 صورة 4</span>
+</label>
+
+</div>
+
+<button class="btn" onclick="finale()">
+اضغطي للنهاية ❤️💥
+</button>
+
+</div>
+</section>
+
+
+<!-- FINAL -->
+
+<section class="screen" id="screen10">
+
+<div class="background"></div>
+<div class="stars"></div>
+
+<div class="card">
+
+<div class="final-heart">
+❤️
+</div>
+
+<span class="badge">إلى الأبد؟</span>
+
+<h2>رانيا...</h2>
+
+<p class="quote">
+
+لو خُيّرت ألف مرة،
+لاخترتكِ أنتِ في كل مرة. ❤️
+
+لأنكِ لم تكوني مجرد شخص أحببته...
+
+كنتِ الشخص الذي جعلني
+أريد أن أصنع مستقبلًا
+يستحق أن نعيشه معًا. 🤍🌹
+
+</p>
+
+<p>
+
+يا طفلتي المدللة،
+يا حبيبتي،
+يا أجمل صدفة أصبحت شيئًا غاليًا في قلبي...
+
+<b>
+أحبكِ ❤️‍🩹🔐🌹
+</b>
+
+</p>
+
+<button class="btn" onclick="celebrate()">
+اضغطي... هناك شيء أخير 🎆
+</button>
+
+</div>
+</section>
+
+
+<script>
+
+const PASSWORD="الحوى";
+
+let current=1;
+
+
+/* SCREEN NAVIGATION */
+
+function showScreen(number){
+
+    document.querySelectorAll(".screen").forEach(screen=>{
+        screen.classList.remove("active");
+    });
+
+    document.getElementById("screen"+number).classList.add("active");
+
+    current=number;
+
+    document.getElementById("progress").style.width=
+    ((number-1)/9*100)+"%";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    burst(number===10?60:15);
+}
+
+function next(){
+
+    if(current<10){
+        showScreen(current+1);
+    }
+
+}
+
+
+/* PASSWORD */
+
+function unlock(){
+
+    const input=document.getElementById("password");
+    const error=document.getElementById("error");
+
+    if(input.value.trim()===PASSWORD){
+
+        error.textContent="تم فتح السر ❤️";
+
+        burst(50);
+        roses(40);
+
+        setTimeout(()=>{
+            showScreen(2);
+        },900);
+
+    }else{
+
+        error.textContent="الكلمة غير صحيحة... حاولي مرة أخرى 🌹";
+
+        input.animate(
+            [
+                {transform:"translateX(0)"},
+                {transform:"translateX(8px)"},
+                {transform:"translateX(-8px)"},
+                {transform:"translateX(0)"}
+            ],
+            {
+                duration:350
+            }
+        );
+
+        burst(8);
+    }
+}
+
+document.getElementById("password").addEventListener("keydown",function(e){
+
+    if(e.key==="Enter"){
+        unlock();
+    }
+
+});
+
+
+/* ENVELOPE */
+
+function openEnvelope(){
+
+    document.getElementById("envelope").classList.add("open");
+
+    burst(30);
+    roses(20);
+}
+
+
+/* GIFT */
+
+function openGift(){
+
+    document.getElementById("gift").classList.add("open");
+
+    burst(70);
+    roses(60);
+
+    setTimeout(()=>{
+        showScreen(7);
+    },1000);
+}
+
+
+/* ROSE MESSAGES */
+
+function reveal(button,message){
+
+    document.getElementById("revealed").textContent=message;
+
+    button.style.transform="scale(1.2)";
+
+    burst(15);
+
+}
+
+
+/* PHOTOS */
+
+function loadPhoto(input){
+
+    if(!input.files || !input.files[0]) return;
+
+    const file=input.files[0];
+
+    const box=input.parentElement;
+
+    const image=document.createElement("img");
+
+    image.src=URL.createObjectURL(file);
+
+    box.innerHTML="";
+
+    box.appendChild(image);
+
+    burst(15);
+}
+
+
+/* FINAL */
+
+function finale(){
+
+    burst(100);
+    roses(100);
+
+    setTimeout(()=>{
+        showScreen(10);
+    },1000);
+
+}
+
+function celebrate(){
+
+    burst(180);
+    roses(180);
+
+    setTimeout(()=>{
+
+        document.querySelector("#screen10 h2").textContent=
+        "أحبكِ يا رانيا ❤️";
+
+    },500);
+
+}
+
+
+/* HEART EXPLOSION */
+
+function burst(amount){
+
+    const container=document.getElementById("particles");
+
+    const icons=[
+        "❤️",
+        "💗",
+        "💖",
+        "💕",
+        "💓",
+        "🌹",
+        "🌸",
+        "🌷",
+        "💐",
+        "✨",
+        "🎀"
+    ];
+
+    for(let i=0;i<amount;i++){
+
+        const particle=document.createElement("span");
+
+        particle.className="particle";
+
+        particle.textContent=
+        icons[Math.floor(Math.random()*icons.length)];
+
+        particle.style.left=
+        (45+Math.random()*10)+"%";
+
+        particle.style.top=
+        (42+Math.random()*12)+"%";
+
+        particle.style.setProperty(
+            "--x",
+            ((Math.random()-.5)*95)+"vw"
+        );
+
+        particle.style.setProperty(
+            "--y",
+            ((Math.random()-.5)*95)+"vh"
+        );
+
+        particle.style.setProperty(
+            "--rotate",
+            ((Math.random()-.5)*900)+"deg"
+        );
+
+        particle.style.animationDelay=
+        (Math.random()*.25)+"s";
+
+        container.appendChild(particle);
+
+        setTimeout(()=>{
+            particle.remove();
+        },2200);
+
+    }
+
+}
+
+
+/* ROSE RAIN */
+
+function roses(amount){
+
+    const container=document.getElementById("rain");
+
+    const icons=[
+        "🌹",
+        "🌷",
+        "🌸",
+        "💗",
+        "❤️",
+        "✨"
+    ];
+
+    for(let i=0;i<amount;i++){
+
+        const rose=document.createElement("span");
+
+        rose.className="falling";
+
+        rose.textContent=
+        icons[Math.floor(Math.random()*icons.length)];
+
+        rose.style.left=
+        Math.random()*100+"vw";
+
+        rose.style.fontSize=
+        (15+Math.random()*25)+"px";
+
+        rose.style.animationDuration=
+        (3+Math.random()*5)+"s";
+
+        rose.style.animationDelay=
+        (Math.random()*1.5)+"s";
+
+        container.appendChild(rose);
+
+        setTimeout(()=>{
+            rose.remove();
+        },9000);
+
+    }
+
+}
+
+
+/* MUSIC BUTTON */
+
+function musicMessage(){
+
+    alert(
+        "🎵 لإضافة أغنية خاصة بكِ، يمكن وضع رابط ملف صوتي داخل الموقع. ❤️"
+    );
+
+}
+
+
+/* RANDOM LITTLE HEARTS */
+
+setInterval(()=>{
+
+    if(Math.random()<.45){
+        burst(2);
+    }
+
+},1800);
+
+</script>
+
+</body>
+</html>
